@@ -1,0 +1,143 @@
+html, body {
+    width: 100vw;
+    min-height: 100vh;
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+html { 
+    display: flex;
+    justify-content: center;
+}
+body {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: repeat(8, auto);
+    grid-gap: 15px;
+    grid-template-areas: 
+    "head"
+    "S1"
+    "S2"
+    "S3"
+    "S4"
+    "S5"
+    "S6"
+    "Footer";
+    padding: 20px;
+    background-color: #000000;
+}
+.S1 {
+    grid-area: S1;
+}
+.S2 {
+    grid-area: S2;
+}
+.S3 {
+    grid-area: S3;
+}
+.S4 {
+    grid-area: S4;
+}
+.S5 {
+    grid-area: S5;
+}
+.S6 {
+    grid-area: S6;
+}
+.Footer {
+    grid-area: Footer;
+    text-align: center;
+}
+
+Header, Div, Footer {
+    border-radius: 10px;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: center;
+}
+h1, p {
+    text-align: center;
+}
+div {
+    font-size: 250%
+}
+
+
+@media screen and (min-width: 768px) {
+
+Body {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: repeat(8, auto);
+    grid-auto-rows: 100px;
+    grid-template-areas: 
+        "header"
+        "S1 S2"
+        "S5 S6"
+        "S3 S4"
+        "footer";
+    grid-gap: 15px;
+    padding: 20px;
+    background-color: #000000;
+    font-size: 24px;
+    }
+    Header { 
+        grid-row: 1 / 2; grid-column: 1 / 4; 
+    }
+    
+    Footer {
+        grid-row: 4 / 5; grid-column: 1 / 4; 
+    }
+
+}    
+
+@media screen and (min-width: 1024px) {
+
+    Body {
+        display: grid;
+        grid-template-columns: auto auto;
+        grid-template-rows: 250px 250px;
+        grid-gap: 20px;
+        grid-template: 
+                 "head"
+                 "S1 S2"
+                 "S5 S6"
+                 "S3 S4"
+                "Footer";
+        padding: 20px;
+        background-color: #000000;
+        font-size: 24px;
+    }
+
+    Header { 
+            grid-row: 1 / 2; grid-column: 1 / 4; 
+        }   
+    Footer {
+            grid-row: 4 / 5; grid-column: 1 / 4; 
+        }
+    
+    .S1 {
+        order:6
+    }
+    .S2 {
+        Order: 5;
+    }
+    .S3 {
+        Order: 4;
+    }
+    .S4 {
+        order: 3;
+    }
+    .S5 {
+        order: 2;
+    }
+    .S6 {
+        order: 1
+    }
+    
+    
+        
+}
+
+ 
+    
